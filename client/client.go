@@ -8,7 +8,7 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
-func NewClient(ctx context.Context, dsn string) *pgxpool.Pool {
+func New(ctx context.Context, dsn string) *pgxpool.Pool {
 	conn, err := pgxpool.New(ctx, dsn)
 
 	if err != nil {
